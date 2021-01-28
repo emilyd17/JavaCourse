@@ -1,2 +1,2 @@
-# Java
+# javacourse
 Java exercises
