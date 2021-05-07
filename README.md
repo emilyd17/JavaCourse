@@ -1,2 +1,2 @@
 # Java OOP
-Java OOP exercises
+Containing this repository are Java OOP exercises I have completed
