@@ -1,2 +1,2 @@
 # Java
-Java exercises
+Java OOP exercises
