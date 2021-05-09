@@ -5,7 +5,7 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-class Bank {
+public class Bank {
     static BankAccount[] accounts = new BankAccount[1]; //This array will point to all the Bank.java.BankAccount objects
     static Scanner scnr = new Scanner(System.in);
     static int noOfAccs = 0;           //Keeps track of the total number of accounts
