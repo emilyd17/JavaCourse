@@ -1,6 +1,7 @@
+// Maintains wage information for employees at a company
+// Uses Inheritance
 // By: Emily Dayanghirang
 // Date: May 7, 2021
-// Maintains wage information for employees at a company
 
 import java.util.Scanner;
 import java.text.NumberFormat;
