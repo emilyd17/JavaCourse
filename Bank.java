@@ -1,6 +1,7 @@
-// By: Emily Dayanghirang
-// Date: April 9, 2021
-// Performs a simple functionality of a bank
+/** Performs a simple functionality of a bank
+ * @author Emily Dayanghirang
+ * @version 1.0
+ */
 
 import java.util.Scanner;
 import java.text.DecimalFormat;
