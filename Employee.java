@@ -1,7 +1,9 @@
-// Maintains wage information for employees at a company
-// Uses Inheritance
-// By: Emily Dayanghirang
-// Date: May 7, 2021
+/** The program maintains wage information 
+ * for employees at a company. It also
+ * uses Inheritance.
+ * @author Emily Dayanghirang
+ * @version 1.0
+ */
 
 import java.util.Scanner;
 import java.text.NumberFormat;
