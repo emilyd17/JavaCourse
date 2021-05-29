@@ -1,4 +1,4 @@
-/** The program maintains wage information 
+/** The program maintains wage information
  * for employees at a company. It also
  * uses Inheritance.
  * @author Emily Dayanghirang
@@ -17,33 +17,33 @@ public abstract class Employee {
         ++empCount;
     }
 
-    Employee(String empName, double hrlyPay) {
+    public Employee(String empName, double hrlyPay) {
         this.empName = empName;
         this.hrlyPay = hrlyPay;
     }
 
     // Getter and setter methods for instance variables
-    void setEmpName(String empName) {
+    public void setEmpName(String empName) {
         this.empName = empName;
     }
-    String getEmpName() {
+    public String getEmpName() {
         return empName;
     }
 
-    void setHrlyPay(double hrlyPay) {
+    public void setHrlyPay(double hrlyPay) {
         this.hrlyPay = hrlyPay;
     }
-    double getHrlyPay() {
+    public double getHrlyPay() {
         return hrlyPay;
     }
 
     // Getter method for static variable
-    static int getEmpCount() {
+    public static int getEmpCount() {
         return empCount;
     }
 
     // Increases hourly wage by given percentage
-    void incrWage(double perInc) {
+    public void incrWage(double perInc) {
         this.hrlyPay += hrlyPay * (perInc/100);
     }
 
@@ -52,7 +52,7 @@ public abstract class Employee {
 }
 
 class HourlyEmployee extends Employee {
-    HourlyEmployee(String empName, double hrlyPay) {
+    public HourlyEmployee(String empName, double hrlyPay) {
         super(empName, hrlyPay);
     }
 
@@ -83,7 +83,7 @@ class HourlyEmployee extends Employee {
 class SalariedEmployee extends Employee {
     double annualSalary;
 
-    SalariedEmployee(String empName, double annualSalary) {
+    public SalariedEmployee(String empName, double annualSalary) {
         // The annualSalary will be used to assign a value to the hrlyPay
         // annualSalary/52/40 would give the hrlyPay
         // 52 weeks in a year/ 40 hours worked in a week
@@ -91,11 +91,11 @@ class SalariedEmployee extends Employee {
         this.annualSalary = annualSalary;
     }
 
-    void setAnnualSalary(double annualSalary) {
+    public void setAnnualSalary(double annualSalary) {
         this.annualSalary = annualSalary;
     }
 
-    double getAnnualSalary() {
+    public double getAnnualSalary() {
         return annualSalary;
     }
 
@@ -125,13 +125,13 @@ class EmployeeDriver {
         } while(!userChoice.equals("Q"));
     }
 
-    private static String employeeMenu() {
+    public static String employeeMenu() {
         String userChoice = "";
         System.out.println("\nN: New employee\n" +
-                           "C: Compute paychecks\n" +
-                           "R: Raise wages\n" +
-                           "L: List all employees\n" +
-                           "Q: Quit\n");
+                "C: Compute paychecks\n" +
+                "R: Raise wages\n" +
+                "L: List all employees\n" +
+                "Q: Quit\n");
         System.out.print("Enter command: ");
         userChoice = scnr.next();
         userChoice = userChoice.toUpperCase();
@@ -140,7 +140,7 @@ class EmployeeDriver {
         return userChoice;
     }
 
-    private static void select(String user) {
+    public static void select(String user) {
         switch (user) {
             case "N":
                 newEmployee();
@@ -162,7 +162,7 @@ class EmployeeDriver {
         }
     }
 
-    private static void newEmployee () {
+    public static void newEmployee () {
         // Grab input from user
         // Create employee object
         // Expand array as needed
@@ -201,7 +201,7 @@ class EmployeeDriver {
 
     }
 
-    private static void computePaycheck () {
+    public static void computePaycheck () {
         // Display weekly pay for all employees
         // For hourly employees first grab hours from users
         // for salaried employees assume weekly hours is 40.
@@ -219,7 +219,7 @@ class EmployeeDriver {
         }
     }
 
-    private static void raiseWages () {
+    public static void raiseWages () {
         // Grab percentage and raise wages for all employees
         // This means that the hourly pay for
         // each employee will be raised by the inputted percentage
@@ -243,7 +243,7 @@ class EmployeeDriver {
         }
     }
 
-    private static void listEmployees () {
+    public static void listEmployees () {
         //display information for all employees
         System.out.println("\nName\t\t\t\tHourly Wages" +
                 "\n-------------\t\t-------------");
@@ -259,7 +259,7 @@ class EmployeeDriver {
         }
     }
 
-    private static Employee[] resize() {
+    public static Employee[] resize() {
         // Resize array
         // Double the size
         Employee[] temp = new Employee[2 * employees.length];
