@@ -49,10 +49,10 @@ class BankAccount {
 }
 
 public class Bank {
-    protected static BankAccount[] accounts = new BankAccount[1]; // This array will point to all the Bank.java.BankAccount objects
+    private static BankAccount[] accounts = new BankAccount[1]; // This array will point to all the Bank.java.BankAccount objects
     protected static Scanner scnr = new Scanner(System.in);
     private static int noOfAccs = 0;           // Keeps track of the total number of accounts
-    protected static DecimalFormat moneyFormat = new DecimalFormat("$0.00");
+    private static DecimalFormat moneyFormat = new DecimalFormat("$0.00");
 
     public static void main(String[] args) {
         bankMenu(); // Call bankMenu
